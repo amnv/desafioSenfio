@@ -6,8 +6,6 @@ import org.springframework.stereotype.Service;
 import br.com.senfio.desafio.model.Sell;
 import br.com.senfio.desafio.repository.SellRepository;
 
-
-@Service
 public class SellService implements IService {
 
 	@Autowired(required = true)

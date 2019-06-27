@@ -20,9 +20,6 @@ import conf.AppConfig;
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = {AppConfig.class})
 public class ServiceTest {
-		
-	@Autowired(required = true)
-	private IService service;
 	
 	@Test
 	public void test() {
@@ -32,7 +29,7 @@ public class ServiceTest {
 	
 	@Test(expected=NullPointerException.class)
 	public void testNullFindById() {
-	//	SellService service = new SellService();
+		SellService service = new SellService();
 				
 		Sell sell = service.findById(1L);
 		assertEquals(null, sell);
@@ -41,7 +38,7 @@ public class ServiceTest {
 	
 	@Test
 	public void testInsert() {
-		//SellService service = new SellService();
+		SellService service = new SellService();
 		
 		List<Product> produtos = Arrays.asList(new Product()); 
 		Sell sell = new Sell();

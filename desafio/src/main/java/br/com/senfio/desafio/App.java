@@ -17,8 +17,6 @@ import org.springframework.test.context.ContextConfiguration;
             "br.com.senfio.repository"
             })
 @ComponentScan(basePackages = {"br.com.senfio"})
-@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
-@ContextConfiguration({"classpath*:spring/applicationContext.xml"})
 public class App 
 {
     public static void main( String[] args )
